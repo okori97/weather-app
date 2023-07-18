@@ -4,7 +4,12 @@
     "es2020": true,
     "jest": true
   },
-  "extends": ["plugin:react/recommended", "airbnb", "airbnb/hooks"],
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:prettier/recommended"
+  ],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
