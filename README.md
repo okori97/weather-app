@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# React Learning Project - Weather app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my React Learning Project! This project is focused on React, a popular front-end framework for building user interfaces. Over the next couple of weeks, I will be exploring various concepts related to React to enhance my skills and add to my portfolio.
 
-## Available Scripts
+## Before I Begin
 
-In the project directory, you can run:
+Before diving into the project, I took a moment to read the following byte about [React: ⚡ What is React?](https://hackmd.io/s/ByMAYN-FN) This provided me with a high-level overview of React and its significance in modern web development.
 
-### `npm start`
+## Learning Objectives
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+By the end of this project, I aim to confidently answer "yes" to the following questions:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Can I explain what React is?
+2. Do I understand the difference between JSX and HTML?
+3. Can I explain the distinction between state and props in React?
+4. Am I able to write tests for React components using React Testing Library?
+5. Do I comprehend how events work in React and how to handle them effectively?
+6. Can I make requests to a server and process the response data in a React application?
+7. Am I capable of handling errors in JavaScript, particularly within a React context?
 
-### `npm test`
+## Concepts Covered
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Throughout this project, I will explore the following key concepts:
 
-### `npm run build`
+- **React**: Understanding the core principles and functionality of React.
+- **JSX**: Differentiating between JSX and HTML syntax and their usage within React components.
+- **Props**: Exploring the concept of props and how they facilitate component communication.
+- **State**: Understanding state management in React and its role in dynamic component behavior.
+- **Stateful Components**: Creating components that manage their own state.
+- **Stateless (Presentational) Components**: Building components focused solely on rendering UI based on props.
+- **React Hooks**: Utilizing React Hooks to manage state and side effects.
+- **React Testing Library**: Writing tests using React Testing Library to ensure component functionality.
+- **Request/Response**: Making HTTP requests to a server and processing the response data within a React application.
+- **Error Handling**: Implementing error handling mechanisms in JavaScript and React.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To get started with this project, I followed these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. I installed the necessary dependencies by running `npm install`
+2. I explored the project structure and familiarized myself with the existing files and folders.
+3. I began working through the provided exercises and examples to deepen my understanding of React concepts.
+4. I referred to external resources, documentation, and the React community for additional support and guidance.
