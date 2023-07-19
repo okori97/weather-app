@@ -4,5 +4,6 @@ import "raf/polyfill";
 import { render } from "react-dom";
 import "./styles/index.css";
 import App from "./components/App";
+import forecast from "./data/forecast.json";
 
-render(<App name="Okori" />, document.getElementById("root"));
+render(<App location={forecast.location} />, document.getElementById("root"));

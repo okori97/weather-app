@@ -2,12 +2,12 @@ import "../styles/App.css";
 import data from "../data/forecast.json";
 import LocationDetails from "./LocationDetails";
 
-const App = () => {
+const App = ({ location }) => {
+  const { city, country } = location;
   return (
     <div>
       <div>
-        <LocationDetails forecasts={data} />
-        {console.log(data)}
+        <LocationDetails city={city} country={country} />
       </div>
     </div>
   );
