@@ -1,5 +1,4 @@
 import "../styles/App.css";
-import data from "../data/forecast.json";
 import LocationDetails from "./LocationDetails";
 
 const App = ({ location }) => {
