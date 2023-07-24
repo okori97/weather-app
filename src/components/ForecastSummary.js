@@ -32,11 +32,11 @@ export default function ForecastSummary() {
 
   console.log(date);
   return (
-    <div className="block__summary">
-      <div className="block__date">{date}</div>
-      <div className="block__icon">{icon}</div>
-      <div className="block__temparature">{`${temperature.max}°C`}</div>
-      <div className="block__description">{description}</div>
+    <div className="forecast-summary">
+      <div className="forecast-summary__date">{date}</div>
+      <div className="forecast-summary__icon">{icon}</div>
+      <div className="forecast-summary__temparature">{`${temperature.max}°C`}</div>
+      <div className="forecast-summary__description">{description}</div>
     </div>
   );
 }
