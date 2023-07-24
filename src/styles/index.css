@@ -13,5 +13,14 @@ code {
     monospace;
 }
 
-.block__summary {
+.forecast_summary {
+}
+
+.forecast-summary__date {
+}
+.forecast-summary__description {
+}
+.forecast-summary__icon {
+}
+.forecast-summary__temperature {
 }
