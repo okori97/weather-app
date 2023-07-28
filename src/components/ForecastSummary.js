@@ -1,6 +1,4 @@
 import React from "react";
-// import forecast from "../data/forecast.json";
-// const { forecasts } = forecast;
 
 export default function ForecastSummary(props) {
   const { date, description, temperature, icon } = props;
