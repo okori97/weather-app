@@ -33,8 +33,13 @@ export default function ForecastSummary(props) {
       <div className="forecast-summary__icon" data-testid="forecast-icon">
         {icon}
       </div>
-      <div className="forecast-summary__temperature">{`${temperature.max}°C`}</div>
+      <div className="forecast-summary__temperature">{`${temperature.max}°c`}</div>
       <div className="forecast-summary__description">{description}</div>
+      <div className="forecast-summary__link-wrap">
+        <a className="forecast-summary__link" href="#" target="blank">
+          More details
+        </a>
+      </div>
     </div>
   );
 }
