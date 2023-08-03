@@ -3,24 +3,48 @@
 body {
   margin: 0;
   background: #eceef1;
-  font-family: "Poppins", sans-serif;
+  font-family: "Ariel", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+a {
+  color: black;
+  font-size: 12px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-.forecast_summary {
+.forecastSummaries--list {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+.forecast-summary {
+  padding: 24px 16px 16px 0;
+  font-size: 15px;
 }
 
 .forecast-summary__date {
+  padding: auto;
 }
 .forecast-summary__description {
+  padding: auto;
 }
 .forecast-summary__icon {
+  padding: 8px 0px 8px 0px;
 }
 .forecast-summary__temperature {
+  padding: auto;
+}
+
+.forecast-summary__link-wrap {
+  margin-top: 4px;
+}
+
+#root {
+  height: 100%;
+  padding-top: 20%;
 }
