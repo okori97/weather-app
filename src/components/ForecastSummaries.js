@@ -2,7 +2,7 @@ import React from "react";
 import ForecastSummary from "./ForecastSummary";
 import "../styles/index.css";
 
-export default function forecastSummaries({ forecasts }) {
+export default function ForecastSummaries({ forecasts }) {
   return (
     <div className="forecastSummaries--list">
       {forecasts.map((forecast) => (

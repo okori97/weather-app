@@ -28,7 +28,7 @@ export default function ForecastSummary(props) {
   let convertedDate = `${day} ${dateFormat(monthNum)} ${monthString}`;
 
   return (
-    <div className="forecast-summary">
+    <div className="forecast-summary" data-testid="forecast-summary">
       <div className="forecast-summary__date">{convertedDate}</div>
       <div className="forecast-summary__icon" data-testid="forecast-icon">
         {icon}
