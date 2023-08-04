@@ -36,7 +36,7 @@ describe("ForecastSummary", () => {
       />
     );
 
-    expect(getByText("1111111")).toHaveAttribute(
+    expect(getByText("Thu 1st Jan")).toHaveAttribute(
       "class",
       "forecast-summary__date"
     );
@@ -44,7 +44,7 @@ describe("ForecastSummary", () => {
       "forecast-summary__description"
     );
     expect(getByText("stubIcon")).toHaveClass("forecast-summary__icon");
-    expect(getByText("11°C")).toHaveClass("forecast-summary__temperature");
+    expect(getByText("11°c")).toHaveClass("forecast-summary__temperature");
     expect(getByTestId("forecast-icon")).toHaveClass("forecast-summary__icon");
   });
 });
