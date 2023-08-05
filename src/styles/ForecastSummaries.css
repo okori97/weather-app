@@ -1,0 +1,4 @@
+.forecastSummaries--list {
+  display: flex;
+  justify-content: space-between;
+}

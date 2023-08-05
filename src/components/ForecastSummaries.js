@@ -1,6 +1,6 @@
 import React from "react";
 import ForecastSummary from "./ForecastSummary";
-import "../styles/index.css";
+import "../styles/ForecastSummaries.css";
 
 export default function ForecastSummaries({ forecasts }) {
   return (
