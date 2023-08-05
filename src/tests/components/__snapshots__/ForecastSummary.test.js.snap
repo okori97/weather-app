@@ -11,12 +11,11 @@ exports[`ForecastSummary renders correctly 1`] = `
     >
       Thu 1st Jan
     </div>
-    <div
+    <img
       class="forecast-summary__icon"
       data-testid="forecast-icon"
-    >
-      stubIcon
-    </div>
+      src="https://openweathermap.org/img/wn/01d@2x.png"
+    />
     <div
       class="forecast-summary__temperature"
     >
@@ -30,13 +29,13 @@ exports[`ForecastSummary renders correctly 1`] = `
     <div
       class="forecast-summary__link-wrap"
     >
-      <a
+      <button
         class="forecast-summary__link"
         href="#"
         target="blank"
       >
         More details
-      </a>
+      </button>
     </div>
   </div>
 </DocumentFragment>

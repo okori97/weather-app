@@ -14,12 +14,10 @@ exports[`forecastSummaries it renders correctly 1`] = `
       >
         Thu 1st Jan
       </div>
-      <div
+      <img
         class="forecast-summary__icon"
         data-testid="forecast-icon"
-      >
-        stubIcon
-      </div>
+      />
       <div
         class="forecast-summary__temperature"
       >
@@ -33,13 +31,13 @@ exports[`forecastSummaries it renders correctly 1`] = `
       <div
         class="forecast-summary__link-wrap"
       >
-        <a
+        <button
           class="forecast-summary__link"
           href="#"
           target="blank"
         >
           More details
-        </a>
+        </button>
       </div>
     </div>
     <div
@@ -51,12 +49,10 @@ exports[`forecastSummaries it renders correctly 1`] = `
       >
         Thu 1st Jan
       </div>
-      <div
+      <img
         class="forecast-summary__icon"
         data-testid="forecast-icon"
-      >
-        stubIcon
-      </div>
+      />
       <div
         class="forecast-summary__temperature"
       >
@@ -70,13 +66,13 @@ exports[`forecastSummaries it renders correctly 1`] = `
       <div
         class="forecast-summary__link-wrap"
       >
-        <a
+        <button
           class="forecast-summary__link"
           href="#"
           target="blank"
         >
           More details
-        </a>
+        </button>
       </div>
     </div>
   </div>
