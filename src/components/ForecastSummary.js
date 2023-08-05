@@ -1,8 +1,13 @@
 import React from "react";
+import iconData from "../data/iconData.json";
+
+console.log(iconData);
 
 export default function ForecastSummary(props) {
   const { date, description, temperature, icon } = props;
 
+  const iconCode = icon.slice(0, 1) + "00";
+  console.log(iconCode);
   // Converts unix into day and month
   let newDate = new Date(date);
   const monthNum = newDate.getDate();
@@ -30,15 +35,17 @@ export default function ForecastSummary(props) {
   return (
     <div className="forecast-summary" data-testid="forecast-summary">
       <div className="forecast-summary__date">{convertedDate}</div>
-      <div className="forecast-summary__icon" data-testid="forecast-icon">
-        {icon}
-      </div>
+      <img
+        className="forecast-summary__icon"
+        data-testid="forecast-icon"
+        src={iconData[iconCode]}
+      ></img>
       <div className="forecast-summary__temperature">{`${temperature.max}°c`}</div>
       <div className="forecast-summary__description">{description}</div>
       <div className="forecast-summary__link-wrap">
-        <a className="forecast-summary__link" href="#" target="blank">
+        <button className="forecast-summary__link" href="#" target="blank">
           More details
-        </a>
+        </button>
       </div>
     </div>
   );
