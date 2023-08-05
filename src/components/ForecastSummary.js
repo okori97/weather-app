@@ -1,13 +1,10 @@
 import React from "react";
 import iconData from "../data/iconData.json";
 
-console.log(iconData);
-
 export default function ForecastSummary(props) {
   const { date, description, temperature, icon } = props;
 
   const iconCode = icon.slice(0, 1) + "00";
-  console.log(iconCode);
   // Converts unix into day and month
   let newDate = new Date(date);
   const monthNum = newDate.getDate();
