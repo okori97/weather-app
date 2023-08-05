@@ -1,5 +1,6 @@
 import React from "react";
 import iconData from "../data/iconData.json";
+import "../styles/ForecastSummary.css";
 
 export default function ForecastSummary(props) {
   const { date, description, temperature, icon } = props;

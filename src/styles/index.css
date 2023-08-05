@@ -19,28 +19,6 @@ code {
     monospace;
 }
 
-.forecast-summary {
-  padding: 24px 16px 16px 0;
-  font-size: 15px;
-}
-
-.forecast-summary__date {
-  padding: auto;
-}
-.forecast-summary__description {
-  padding: auto;
-}
-.forecast-summary__icon {
-  padding: 8px 0px 8px 0px;
-}
-.forecast-summary__temperature {
-  padding: auto;
-}
-
-.forecast-summary__link-wrap {
-  margin-top: 4px;
-}
-
 #root {
   height: 100%;
   padding-top: 20%;
