@@ -10,7 +10,10 @@
   padding: auto;
 }
 .forecast-summary__icon {
-  padding: 8px 0px 8px 0px;
+  padding: 0;
+  height: 75px;
+  position: relative;
+  left: -20px;
 }
 .forecast-summary__temperature {
   padding: auto;
