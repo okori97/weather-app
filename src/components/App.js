@@ -5,7 +5,7 @@ import ForecastSummaries from "./ForecastSummaries";
 
 const App = ({ location, forecasts }) => {
   return (
-    <div className="forecasts">
+    <div className="weather-app">
       <div>
         <LocationDetails city={location.city} country={location.country} />
         <ForecastSummaries forecasts={forecasts} />
