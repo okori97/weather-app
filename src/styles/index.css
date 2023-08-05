@@ -7,21 +7,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-a {
-  color: black;
-  font-size: 12px;
+
+button {
+  border: 0;
+  padding: 0;
+  text-decoration: underline;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.forecastSummaries--list {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-between;
-}
+
 .forecast-summary {
   padding: 24px 16px 16px 0;
   font-size: 15px;
