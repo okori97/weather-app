@@ -1,34 +1,16 @@
 import React from "react";
 import iconData from "../data/iconData.json";
 import "../styles/ForecastSummary.css";
+import GetDate from "../helpers/getDate";
+import addSuffix from "../helpers/addSuffix";
 
 export default function ForecastSummary(props) {
   const { date, description, temperature, icon } = props;
-
   const iconCode = icon.slice(0, 1) + "00";
-  // Converts unix into day and month
-  let newDate = new Date(date);
-  const monthNum = newDate.getDate();
-  const monthString = newDate.toLocaleString("en-US", { month: "short" });
-  const day = newDate.toLocaleString("en-US", { weekday: "short" });
 
-  // grabs date and adds the proper suffix
-  const dateFormat = (month) => {
-    if (month > 3 && month < 21) return `${month}th`;
-    switch (month) {
-      case 1:
-        return `${month}st`;
-      case 2:
-        return `${month}nd`;
-      case 3:
-        return `${month}rd`;
-
-      default:
-        return `${month}th`;
-    }
-  };
-
-  let convertedDate = `${day} ${dateFormat(monthNum)} ${monthString}`;
+  // Converts unix into date and adds suffix to month
+  const { day, monthNum, monthString } = GetDate(date);
+  let convertedDate = `${day} ${addSuffix(monthNum)} ${monthString}`;
 
   return (
     <div className="forecast-summary" data-testid="forecast-summary">
@@ -37,6 +19,7 @@ export default function ForecastSummary(props) {
         className="forecast-summary__icon"
         data-testid="forecast-icon"
         src={iconData[iconCode]}
+        alt="weather icon"
       ></img>
       <div className="forecast-summary__temperature">{`${temperature.max}°c`}</div>
       <div className="forecast-summary__description">{description}</div>
