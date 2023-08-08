@@ -1,6 +1,8 @@
 import React from "react";
 import GetDate from "../helpers/getDate";
 import addSuffix from "../helpers/addSuffix";
+import "../styles/ForecastDetails.css";
+
 export default function ForecastDetails({ forecasts }) {
   const { date, temperature, humidity, wind } = forecasts[0];
   console.log(forecasts[0]);
@@ -10,8 +12,8 @@ export default function ForecastDetails({ forecasts }) {
   let convertedDate = `${day} ${addSuffix(monthNum)} ${monthString}`;
 
   return (
-    <div>
-      <h1>{convertedDate}</h1>
+    <div className="forecast-details">
+      <h2>{convertedDate}</h2>
       <div>
         <span className="bold">Max Temperature: </span>
         {temperature.max}

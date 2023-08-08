@@ -1,0 +1,9 @@
+.bold {
+  font-weight: bold;
+}
+
+.forecast-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
