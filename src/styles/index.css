@@ -14,6 +14,17 @@ button {
   text-decoration: underline;
 }
 
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
