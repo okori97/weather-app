@@ -14,19 +14,19 @@ export default function ForecastDetails({ forecasts }) {
   return (
     <div className="forecast-details">
       <h2>{convertedDate}</h2>
-      <div>
+      <div className="forecast-details--item">
         <span className="bold">Max Temperature: </span>
-        {temperature.max}
+        {`${temperature.max}°c`}
       </div>
-      <div>
+      <div className="forecast-details--item">
         <span className="bold">Min Temperature: </span>
-        {temperature.min}
+        {`${temperature.min}°c`}
       </div>
-      <div>
+      <div className="forecast-details--item">
         <span className="bold">Humidity: </span>
-        {humidity}
+        {`${humidity}%`}
       </div>
-      <div>
+      <div className="forecast-details--item">
         <span className="bold">Wind: </span>
         {wind.speed}
       </div>
