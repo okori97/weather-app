@@ -5,7 +5,6 @@ import "../styles/ForecastDetails.css";
 
 export default function ForecastDetails({ forecasts }) {
   const { date, temperature, humidity, wind } = forecasts[0];
-  console.log(forecasts[0]);
 
   // Converts unix into date and adds suffix to month
   const { day, monthNum, monthString } = GetDate(date);
