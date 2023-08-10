@@ -12,6 +12,7 @@ exports[`ForecastSummary renders correctly 1`] = `
       Thu 1st Jan
     </div>
     <img
+      alt="weather icon"
       class="forecast-summary__icon"
       data-testid="forecast-icon"
       src="https://openweathermap.org/img/wn/01d@2x.png"

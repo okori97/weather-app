@@ -3,22 +3,18 @@ import { render } from "@testing-library/react";
 import ForecastDetails from "../../components/ForecastDetails";
 
 describe("ForecastDetails", () => {
-  const validProps = [
-    {
-      date: "111",
-      temperature: {
-        max: 12,
-        min: 4,
-      },
-      icon: 800,
-      wind: {
-        speed: 60,
-      },
-      humidity: 40,
+  const validProps = {
+    date: "111",
+    temperature: {
+      max: 12,
+      min: 4,
     },
-    {},
-  ];
-
+    icon: 800,
+    wind: {
+      speed: 60,
+    },
+    humidity: 40,
+  };
   it("renders correctly", () => {
     const { asFragment } = render(<ForecastDetails forecasts={validProps} />);
     expect(asFragment()).toMatchSnapshot();
