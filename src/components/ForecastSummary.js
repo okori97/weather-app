@@ -5,7 +5,8 @@ import GetDate from "../helpers/getDate";
 import addSuffix from "../helpers/addSuffix";
 
 export default function ForecastSummary(props) {
-  const { date, description, temperature, icon } = props;
+  console.log(props.date);
+  const { date, description, temperature, icon, onSelect } = props;
   const iconCode = icon.slice(0, 1) + "00";
 
   // Converts unix into date and adds suffix to month
@@ -24,7 +25,12 @@ export default function ForecastSummary(props) {
       <div className="forecast-summary__temperature">{`${temperature.max}°c`}</div>
       <div className="forecast-summary__description">{description}</div>
       <div className="forecast-summary__link-wrap">
-        <button className="forecast-summary__link" href="#" target="blank">
+        <button
+          className="forecast-summary__link"
+          onClick={() => onSelect(date)}
+          href="#"
+          target="blank"
+        >
           More details
         </button>
       </div>

@@ -3,8 +3,8 @@ import GetDate from "../helpers/getDate";
 import addSuffix from "../helpers/addSuffix";
 import "../styles/ForecastDetails.css";
 
-export default function ForecastDetails({ forecasts }) {
-  const { date, temperature, humidity, wind } = forecasts[0];
+export default function ForecastDetails({ forecast }) {
+  const { date, temperature, humidity, wind } = forecast;
 
   // Converts unix into date and adds suffix to month
   const { day, monthNum, monthString } = GetDate(date);
