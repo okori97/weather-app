@@ -1,5 +1,4 @@
 import ForecastSummaries from "../../components/ForecastSummaries";
-import ForecastSummary from "../../components/ForecastSummary";
 import React from "react";
 import { render } from "@testing-library/react";
 
@@ -25,7 +24,7 @@ describe("forecastSummaries", () => {
     },
   ];
 
-  it("it renders correctly", () => {
+  it("renders correctly", () => {
     const { asFragment } = render(<ForecastSummaries forecasts={validProp} />);
     expect(asFragment()).toMatchSnapshot();
   });
