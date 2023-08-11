@@ -5,7 +5,6 @@ import GetDate from "../helpers/getDate";
 import addSuffix from "../helpers/addSuffix";
 
 export default function ForecastSummary(props) {
-  console.log(props.date);
   const { date, description, temperature, icon, onSelect } = props;
   const iconCode = icon.slice(0, 1) + "00";
 
