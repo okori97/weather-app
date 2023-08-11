@@ -16,12 +16,12 @@ describe("ForecastDetails", () => {
     humidity: 40,
   };
   it("renders correctly", () => {
-    const { asFragment } = render(<ForecastDetails forecasts={validProps} />);
+    const { asFragment } = render(<ForecastDetails forecast={validProps} />);
     expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders the correct value for props", () => {
-    const { getByText } = render(<ForecastDetails forecasts={validProps} />);
+    const { getByText } = render(<ForecastDetails forecast={validProps} />);
 
     expect(getByText("Thu 1st Jan")).toBeInstanceOf(HTMLHeadingElement);
     expect(getByText("12°c")).toHaveClass("forecast-details--item");
