@@ -4,7 +4,6 @@ import addSuffix from "../helpers/addSuffix";
 import "../styles/ForecastDetails.css";
 
 export default function ForecastDetails({ forecast }) {
-  console.log(forecast.date);
   const { date, temperature, humidity, wind } = forecast;
 
   // Converts unix into date and adds suffix to month
