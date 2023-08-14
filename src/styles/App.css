@@ -5,12 +5,6 @@
   margin: 0;
 }
 
-.location-name {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 0;
-}
-
 .weather-app {
   max-width: 100%;
   width: 850px;
