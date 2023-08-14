@@ -12,6 +12,7 @@ describe("ForecastSummary", () => {
       max: 11,
       min: 4,
     },
+    onSelect: () => {},
   };
   it("renders correctly", () => {
     const { asFragment } = render(
@@ -20,6 +21,7 @@ describe("ForecastSummary", () => {
         description={validProps.description}
         icon={validProps.icon}
         temperature={validProps.temperature}
+        onSelect={validProps.onSelect}
       />
     );
 

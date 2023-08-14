@@ -34,8 +34,7 @@ exports[`forecastSummaries renders correctly 1`] = `
       >
         <button
           class="forecast-summary__link"
-          href="#"
-          target="blank"
+          type="button"
         >
           More details
         </button>
@@ -70,8 +69,7 @@ exports[`forecastSummaries renders correctly 1`] = `
       >
         <button
           class="forecast-summary__link"
-          href="#"
-          target="blank"
+          type="button"
         >
           More details
         </button>
