@@ -25,10 +25,9 @@ export default function ForecastSummary(props) {
       <div className="forecast-summary__description">{description}</div>
       <div className="forecast-summary__link-wrap">
         <button
+          type="button"
           className="forecast-summary__link"
           onClick={() => onSelect(date)}
-          href="#"
-          target="blank"
         >
           More details
         </button>
