@@ -3,10 +3,18 @@ import "../styles/index.css";
 import LocationDetails from "./LocationDetails";
 import ForecastSummaries from "./ForecastSummaries";
 import ForecastDetails from "./ForecastDetails";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import getForecasts from "../requests/getForecasts";
 
-const App = ({ location, forecasts }) => {
-  const [selectedDate, setSelectedDate] = useState(forecasts[0].date);
+const App = () => {
+  const [location, setLocation] = useState({});
+  const [forecasts, setForecasts] = useState([]);
+  const [selectedDate, setSelectedDate] = useState(0);
+
+  useEffect(() => {
+    getForecasts(setLocation, setForecasts, setSelectedDate);
+  }, []);
+
   const selectedForecast = forecasts.find(
     (forecast) => forecast.date === selectedDate
   );
@@ -22,7 +30,7 @@ const App = ({ location, forecasts }) => {
           forecasts={forecasts}
           onForecastSelect={handleForecastSelect}
         />
-        <ForecastDetails forecast={selectedForecast} />
+        {selectedForecast && <ForecastDetails forecast={selectedForecast} />}
       </div>
     </div>
   );
