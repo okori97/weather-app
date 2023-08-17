@@ -4,9 +4,5 @@ import "raf/polyfill";
 import { render } from "react-dom";
 import "./styles/index.css";
 import App from "./components/App";
-import forecast from "./data/forecast.json";
 
-render(
-  <App location={forecast.location} forecasts={forecast.forecasts} />,
-  document.getElementById("root")
-);
+render(<App />, document.getElementById("root"));
