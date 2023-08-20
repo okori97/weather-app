@@ -7,7 +7,7 @@ describe("ForecastSummary", () => {
   const validProps = {
     date: 1111111,
     description: "stubDescription",
-    icon: "800",
+    icon: 800,
     temperature: {
       max: 11,
       min: 4,
@@ -33,7 +33,7 @@ describe("ForecastSummary", () => {
       <ForecastSummary
         date={validProps.date}
         description={validProps.description}
-        icon={validProps.icon}
+        icon={validProps.icon.toString()}
         temperature={validProps.temperature}
       />
     );
