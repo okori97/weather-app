@@ -18,6 +18,7 @@ exports[`forecastSummaries renders correctly 1`] = `
         alt="weather icon"
         class="forecast-summary__icon"
         data-testid="forecast-icon"
+        src="https://openweathermap.org/img/wn/01d@2x.png"
       />
       <div
         class="forecast-summary__temperature"
@@ -53,6 +54,7 @@ exports[`forecastSummaries renders correctly 1`] = `
         alt="weather icon"
         class="forecast-summary__icon"
         data-testid="forecast-icon"
+        src="https://openweathermap.org/img/wn/01d@2x.png"
       />
       <div
         class="forecast-summary__temperature"
