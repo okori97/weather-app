@@ -3,35 +3,46 @@ import React from "react";
 import { render } from "@testing-library/react";
 
 describe("forecastSummaries", () => {
-  const validProp = [
-    {
-      date: 111,
-      description: "stubDescription",
-      temperature: {
-        max: 10,
-        min: 10,
+  const validProp = {
+    forecasts: [
+      {
+        date: 111,
+        description: "stubDescription",
+        icon: "800",
+        temperature: {
+          max: 10,
+          min: 10,
+        },
       },
-      icon: "stubIcon",
-    },
-    {
-      date: 222,
-      description: "stubDescription",
-      temperature: {
-        max: 10,
-        min: 10,
+      {
+        date: 222,
+        description: "stubDescription",
+        icon: "800",
+        temperature: {
+          max: 10,
+          min: 10,
+        },
       },
-      icon: "stubIcon",
-    },
-  ];
+    ],
+    onForecastSelect: () => {},
+  };
 
   it("renders correctly", () => {
-    const { asFragment } = render(<ForecastSummaries forecasts={validProp} />);
+    const { asFragment } = render(
+      <ForecastSummaries
+        forecasts={validProp.forecasts}
+        onForecastSelect={validProp.onForecastSelect}
+      />
+    );
     expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders the correct number of list items", () => {
     const { getAllByTestId } = render(
-      <ForecastSummaries forecasts={validProp} />
+      <ForecastSummaries
+        forecasts={validProp.forecasts}
+        onForecastSelect={validProp.onForecastSelect}
+      />
     );
 
     expect(getAllByTestId("forecast-summary")).toHaveLength(2);
