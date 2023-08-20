@@ -6,7 +6,7 @@ import addSuffix from "../helpers/addSuffix";
 
 export default function ForecastSummary(props) {
   const { date, description, temperature, icon, onSelect } = props;
-  const iconCode = icon.slice(0, 1) + "00";
+  const iconCode = icon.toString().slice(0, 1) + "00";
 
   // Converts unix into date and adds suffix to month
   const { day, monthNum, monthString } = GetDate(date);
