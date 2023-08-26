@@ -7,6 +7,7 @@ describe("Search Form", () => {
     setLocation: () => {},
     setForecasts: () => {},
     setSelectedDate: () => {},
+    onSubmit: () => {},
   };
 
   it("renders correctly", () => {
@@ -15,10 +16,14 @@ describe("Search Form", () => {
         setLocation={validProps.setLocation}
         setForecasts={validProps.setForecasts}
         setSelectedDate={validProps.setSelectedDate}
+        onSubmit={validProps.onSubmit()}
       />
     );
     expect(asFragment()).toMatchSnapshot();
   });
 
-  
+  it("submit button displays the right text", () => {
+    const { getByText } = render(<SearchForm />);
+    expect(getByText("Submit")).toHaveClass("form__button");
+  });
 });
