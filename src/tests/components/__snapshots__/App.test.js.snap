@@ -9,6 +9,21 @@ exports[`App renders react app properly 1`] = `
       <h1>
         undefined, undefined
       </h1>
+      <form
+        class="form"
+      >
+        <input
+          class="form__input"
+          id="form__input"
+          placeholder="Search a city..."
+          type="search"
+        />
+        <input
+          class="form__button"
+          type="button"
+          value="Submit"
+        />
+      </form>
       <div
         class="forecastSummaries--list"
       />
