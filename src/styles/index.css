@@ -29,6 +29,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+span.error-message__span {
+  color: #faaf90;
+}
+.error-message {
+  width: fit-content;
+  padding: 4px 6px 4px 6px;
+  background-color: black;
+  font-weight: 700;
+  color: white;
+}
 
 #root {
   height: 100%;
