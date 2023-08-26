@@ -1,8 +1,9 @@
 import React from "react";
 import "raf/polyfill";
 // import ReactDOM from "react-dom/client";
-import { render } from "react-dom";
+import { createRoot } from "react-dom/client";
 import "./styles/index.css";
 import App from "./components/App";
 
-render(<App />, document.getElementById("root"));
+const root = createRoot(document.getElementById("root"));
+root.render(<App />);
