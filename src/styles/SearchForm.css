@@ -16,6 +16,7 @@
   padding: 0px 16px 0px 16px;
   font-size: 14px;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .form {
@@ -27,13 +28,4 @@
   max-width: 300px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   transition: box-shadow 1s;
-}
-
-.form:hover {
-  box-shadow:
-    rgba(240, 46, 170, 0.4) -5px 5px,
-    rgba(240, 46, 170, 0.3) -10px 10px,
-    rgba(240, 46, 170, 0.2) -15px 15px,
-    rgba(240, 46, 170, 0.1) -20px 20px,
-    rgba(240, 46, 170, 0.05) -25px 25px;
 }
