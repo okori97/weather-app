@@ -3,6 +3,7 @@ import "../styles/index.css";
 import LocationDetails from "./LocationDetails";
 import ForecastSummaries from "./ForecastSummaries";
 import ForecastDetails from "./ForecastDetails";
+import SearchForm from "./SearchForm";
 import React, { useState, useEffect } from "react";
 import getForecasts from "../requests/getForecasts";
 
@@ -22,10 +23,15 @@ const App = () => {
   const handleForecastSelect = (date) => {
     setSelectedDate(date);
   };
+
+  const handleCitySelect = (city) => {
+    getForecasts(setLocation, setForecasts, setSelectedDate, city);
+  };
   return (
     <div className="weather-app">
       <div>
         <LocationDetails city={location.city} country={location.country} />
+        <SearchForm handleCitySelect={handleCitySelect} />
         <ForecastSummaries
           forecasts={forecasts}
           onForecastSelect={handleForecastSelect}
