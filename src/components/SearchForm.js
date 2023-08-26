@@ -1,13 +1,10 @@
 import React from "react";
 import "../styles/SearchForm.css";
-import getForecasts from "../requests/getForecasts";
-import axios from "axios";
 
-export default function SearchForm({ handleCitySelect }) {
-  const getInput = () => {
-    let input = document.getElementById("form__input").value;
-
-    return handleCitySelect(input);
+export default function SearchForm({ onSubmit, setSearchText, searchText }) {
+  const handleChange = (event) => {
+    let input = event.target.value;
+    setSearchText(input);
   };
   return (
     <form className="form">
@@ -16,12 +13,13 @@ export default function SearchForm({ handleCitySelect }) {
         className="form__input"
         placeholder="Search a city..."
         type="search"
+        onChange={handleChange}
       ></input>
       <input
         className="form__button"
         type="button"
         value={"Submit"}
-        onClick={() => getInput()}
+        onClick={() => onSubmit()}
       ></input>
     </form>
   );
