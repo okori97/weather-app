@@ -23,13 +23,16 @@ export default function getForecasts(
     })
     .catch(Error)
     .then((Error) => {
+      //Checks for Error Code
       let is404Error = new RegExp(/404/i).test(Error);
       let is500Error = new RegExp(/500/i).test(Error);
 
+      // If no 404 or 500 Error then set errorMessage to empty
       if (!is404Error && !is500Error) {
         setErrorMessage("");
       }
 
+      // If Error is 404 sets appropiate error message
       if (is404Error) {
         setErrorMessage(
           <>
@@ -40,6 +43,7 @@ export default function getForecasts(
           </>
         );
       }
+      // If Error is 404 sets appropiate error message
       if (is500Error) {
         setErrorMessage(
           "The server is currently unable to handle your request"
