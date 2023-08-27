@@ -51,9 +51,12 @@ const App = () => {
         />
         <ForecastSummaries
           forecasts={forecasts}
+          isError={errorMessage}
           onForecastSelect={handleForecastSelect}
         />
-        {selectedForecast && <ForecastDetails forecast={selectedForecast} />}
+        {selectedForecast && (
+          <ForecastDetails forecast={selectedForecast} isError={errorMessage} />
+        )}
       </div>
     </div>
   );
