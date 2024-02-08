@@ -76,6 +76,15 @@ section {
 	width: 100%;
 }
 
+.space-between {
+	display: flex;
+	justify-content: space-between;
+}
+
+.no-padding {
+	padding: 0;
+}
+
 #root {
 	margin: auto;
 }
