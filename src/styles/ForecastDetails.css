@@ -3,6 +3,7 @@
 }
 
 .forecast-details {
+	padding: 24px 0px 24px 0px;
 	display: flex;
 	flex-direction: column;
 	text-align: left;
