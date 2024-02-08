@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/NewsBlock.css";
 import getNews from "../requests/getNews";
+import { calcDaysPassed } from "../helpers/dateUtils";
 
 export default function NewsBlock() {
 	const [news, setNews] = useState({
@@ -18,11 +19,14 @@ export default function NewsBlock() {
 		fetchNews();
 	}, []);
 
+	const daysPassed = calcDaysPassed(news.publishedAt);
 	return (
 		<div className="news space-between">
 			<div className="news__details">
 				<h1 className="news__details-title"> {news.title}</h1>
-				<p className="news__details-timestamp">5 mins ago</p>
+				<p className="news__details-timestamp">
+					{Math.floor(daysPassed)} days ago
+				</p>
 			</div>
 
 			<div className="news__row space-between">
