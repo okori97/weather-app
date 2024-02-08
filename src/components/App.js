@@ -3,6 +3,7 @@ import "../styles/index.css";
 import LocationDetails from "./LocationDetails";
 import ForecastSummaries from "./ForecastSummaries";
 import ForecastDetails from "./ForecastDetails";
+import NewsBlock from "./NewsBlock";
 import SearchForm from "./SearchForm";
 import React, { useState, useEffect } from "react";
 import getForecasts from "../requests/getForecasts";
@@ -75,11 +76,12 @@ const App = () => {
 						/>
 					</div>
 					{selectedForecast && (
-						<div className="container">
+						<div className="container space-between no-padding">
 							<ForecastDetails
 								forecast={selectedForecast}
 								isError={errorMessage}
 							/>
+							<NewsBlock />
 						</div>
 					)}
 				</section>
