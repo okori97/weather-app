@@ -1,17 +1,17 @@
 import React from "react";
 
 export default function LocationDetails(props) {
-  const { city, country, isError } = props;
-  console.log(isError);
+	const { city, country, isError } = props;
+	console.log(isError);
 
-  //Returns nothing if there is an error
-  if (isError) {
-    return <>{isError}</>;
-  }
+	//Returns nothing if there is an error
+	if (isError) {
+		return <>{isError}</>;
+	}
 
-  return (
-    <>
-      <h1>{`${city}, ${country}`}</h1>
-    </>
-  );
+	return (
+		<>
+			<h1 className="center">{`${city}, ${country}`}</h1>
+		</>
+	);
 }
