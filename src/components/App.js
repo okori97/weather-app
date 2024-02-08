@@ -45,7 +45,7 @@ const App = () => {
 	return (
 		<div className="weather-app">
 			<div className="modal">
-				<div>
+				<div className="search">
 					<LocationDetails
 						city={location.city}
 						country={location.country}

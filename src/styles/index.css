@@ -76,6 +76,12 @@ section {
 	width: 100%;
 }
 
+.search {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
 .space-between {
 	display: flex;
 	justify-content: space-between;
