@@ -21,7 +21,15 @@
 }
 
 .form__button:hover {
+	background-color: #000000;
+}
+
+.form__button.warm:hover {
 	background-color: #590606;
+}
+
+.form__button.cold:hover {
+	background-color: #080659;
 }
 
 .form {

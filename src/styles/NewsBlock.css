@@ -14,11 +14,23 @@
 
 .news:hover {
 	border: 1px solid #7d7d7d;
+}
+
+.news.warm:hover {
 	background-image: radial-gradient(
 		ellipse at left bottom,
 		#fdd2d2,
 		#fde0d2,
 		#fdf3d2
+	);
+}
+
+.news.cold:hover {
+	background-image: radial-gradient(
+		ellipse at left bottom,
+		#ead2fd,
+		#d2d6fd,
+		#d2fdf7
 	);
 }
 
@@ -55,7 +67,15 @@
 }
 
 .news__button:hover {
+	background-color: #000;
+}
+
+.news__button.warm:hover {
 	background-color: #590606;
+}
+
+.news__button.cold:hover {
+	background-color: #080659;
 }
 
 .news__chip {
