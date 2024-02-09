@@ -83,6 +83,8 @@ const App = () => {
 				<section>
 					<div className="container">
 						<ForecastSummaries
+							isWarm={isWarm}
+							selectedDate={selectedDate}
 							forecasts={forecasts}
 							isError={errorMessage}
 							onForecastSelect={handleForecastSelect}
