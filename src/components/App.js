@@ -14,6 +14,7 @@ const App = () => {
 	const [selectedDate, setSelectedDate] = useState(0);
 	const [searchText, setSearchText] = useState("");
 	const [errorMessage, setErrorMessage] = useState("");
+	const [isWarm, setIsWarm] = useState("");
 	console.log(searchText);
 
 	useEffect(() => {
@@ -24,6 +25,19 @@ const App = () => {
 			setSelectedDate
 		);
 	}, []);
+
+	useEffect(() => {
+		const checkIsWarm = (forecast) => {
+			if (forecast.temperature.max > 10) {
+				setIsWarm("true");
+			} else {
+				setIsWarm("false");
+			}
+		};
+
+		checkIsWarm(selectedForecast);
+		// eslint-disable-next-line
+	}, [selectedDate]);
 
 	const selectedForecast = forecasts.find(
 		(forecast) => forecast.date === selectedDate
@@ -55,6 +69,7 @@ const App = () => {
 						onSubmit={handleCitySelect}
 						searchText={searchText}
 						setSearchText={setSearchText}
+						isWarm={isWarm}
 					/>
 				</div>
 				<section>
@@ -71,7 +86,7 @@ const App = () => {
 								forecast={selectedForecast}
 								isError={errorMessage}
 							/>
-							<NewsBlock />
+							<NewsBlock isWarm={isWarm} />
 						</div>
 					)}
 				</section>
