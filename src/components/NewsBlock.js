@@ -4,7 +4,6 @@ import getNews from "../requests/getNews";
 import { calcDaysPassed } from "../helpers/dateUtils";
 
 export default function NewsBlock({ isWarm }) {
-	console.log(isWarm);
 	const [news, setNews] = useState({
 		title: "",
 		url: "",

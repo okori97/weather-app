@@ -15,7 +15,6 @@ const App = () => {
 	const [searchText, setSearchText] = useState("");
 	const [errorMessage, setErrorMessage] = useState("");
 	const [isWarm, setIsWarm] = useState("");
-	console.log(searchText);
 
 	useEffect(() => {
 		getForecasts(
@@ -30,7 +29,6 @@ const App = () => {
 		const checkIsWarm = (forecast) => {
 			let body = document.body;
 			if (forecast) {
-				console.log(forecast);
 				if (forecast.temperature.max > 10) {
 					setIsWarm(true);
 					body.classList.remove("cold");
