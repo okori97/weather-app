@@ -5,7 +5,15 @@ import { GetDate } from "../helpers/dateUtils";
 import addSuffix from "../helpers/addSuffix";
 
 export default function ForecastSummary(props) {
-	const { date, description, temperature, icon, onSelect } = props;
+	const {
+		date,
+		description,
+		temperature,
+		icon,
+		onSelect,
+		isWarm,
+		selectedDate,
+	} = props;
 	const iconCode = icon.toString().slice(0, 1) + "00";
 
 	// Converts unix into date and adds suffix to month
@@ -13,7 +21,14 @@ export default function ForecastSummary(props) {
 	let convertedDate = `${day} ${addSuffix(monthNum)} ${monthString}`;
 
 	return (
-		<div className="forecast-summary" data-testid="forecast-summary">
+		<div
+			className={
+				"forecast-summary " +
+				(isWarm ? "warm " : "cold ") +
+				(selectedDate === date ? "selected" : "")
+			}
+			data-testid="forecast-summary"
+		>
 			<div className="forecast-summary__date">{convertedDate}</div>
 			<img
 				className="forecast-summary__icon"
@@ -25,7 +40,11 @@ export default function ForecastSummary(props) {
 			<div className="forecast-summary__description">{description}</div>
 			<button
 				type="button"
-				className="forecast-summary__button"
+				className={
+					"forecast-summary__button " +
+					(isWarm ? "warm " : "cold ") +
+					(selectedDate === date ? "selected" : "")
+				}
 				onClick={() => onSelect(date)}
 			>
 				More details
