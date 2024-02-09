@@ -23,15 +23,13 @@ export default function ForecastSummary(props) {
 			></img>
 			<div className="forecast-summary__temperature">{`${temperature.max}°c`}</div>
 			<div className="forecast-summary__description">{description}</div>
-			<div className="forecast-summary__link-wrap">
-				<button
-					type="button"
-					className="forecast-summary__link"
-					onClick={() => onSelect(date)}
-				>
-					More details
-				</button>
-			</div>
+			<button
+				type="button"
+				className="forecast-summary__button"
+				onClick={() => onSelect(date)}
+			>
+				More details
+			</button>
 		</div>
 	);
 }
