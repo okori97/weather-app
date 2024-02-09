@@ -15,7 +15,6 @@ export default function NewsBlock() {
 			const response = await getNews();
 			setNews(response);
 		}
-		console.log(news.publishedAt);
 		fetchNews();
 	}, []);
 
@@ -30,7 +29,12 @@ export default function NewsBlock() {
 			</div>
 
 			<div className="news__row space-between">
-				<a className="news__button" href={news.url} target="_blank">
+				<a
+					className="news__button"
+					href={news.url}
+					target="_blank"
+					rel="noreferrer"
+				>
 					Read More
 				</a>
 				<div className="news__chip">{news.name}</div>
