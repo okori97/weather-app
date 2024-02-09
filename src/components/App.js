@@ -28,14 +28,22 @@ const App = () => {
 
 	useEffect(() => {
 		const checkIsWarm = (forecast) => {
-			if (forecast.temperature.max > 10) {
-				setIsWarm("true");
-			} else {
-				setIsWarm("false");
+			let body = document.body;
+			if (forecast) {
+				console.log(forecast);
+				if (forecast.temperature.max > 10) {
+					setIsWarm(true);
+					body.classList.remove("cold");
+					body.classList.add("warm");
+				} else {
+					setIsWarm(false);
+					body.classList.remove("warm");
+					body.classList.add("cold");
+				}
 			}
 		};
-
 		checkIsWarm(selectedForecast);
+
 		// eslint-disable-next-line
 	}, [selectedDate]);
 
@@ -58,7 +66,7 @@ const App = () => {
 	};
 	return (
 		<div className="weather-app">
-			<div className="modal">
+			<div className={"modal " + (isWarm ? "warm " : "cold ")}>
 				<div className="search">
 					<LocationDetails
 						city={location.city}
