@@ -3,7 +3,8 @@ import "../styles/NewsBlock.css";
 import getNews from "../requests/getNews";
 import { calcDaysPassed } from "../helpers/dateUtils";
 
-export default function NewsBlock() {
+export default function NewsBlock({ isWarm }) {
+	console.log(isWarm);
 	const [news, setNews] = useState({
 		title: "",
 		url: "",
@@ -20,7 +21,9 @@ export default function NewsBlock() {
 
 	const daysPassed = calcDaysPassed(news.publishedAt);
 	return (
-		<div className="news space-between">
+		<div
+			className={"news " + (isWarm ? "warm " : "cold ") + "space-between"}
+		>
 			<div className="news__details">
 				<h1 className="news__details-title"> {news.title}</h1>
 				<p className="news__details-timestamp">
@@ -30,7 +33,7 @@ export default function NewsBlock() {
 
 			<div className="news__row space-between">
 				<a
-					className="news__button"
+					className={"news__button " + (isWarm ? "warm " : "cold")}
 					href={news.url}
 					target="_blank"
 					rel="noreferrer"
